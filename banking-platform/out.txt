@@ -1,0 +1,79 @@
+﻿> Task :banking-common:compileJava UP-TO-DATE
+> Task :banking-common:processResources NO-SOURCE
+> Task :banking-common:classes UP-TO-DATE
+> Task :banking-common:jar UP-TO-DATE
+
+> Task :auth-service:compileJava
+.\gradlew : C:\Banking
+-Web-Microservices\ban
+king-platform\auth-ser
+vice\src\main\java\com
+\banking\auth\service\
+AuthService.java:19: 
+error: cannot find 
+symbol
+At line:1 char:1
++ .\gradlew :auth-serv
+ice:compileJava 2>&1 
+| Out-File -Encoding 
+utf8 ou ...
++ ~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo    
+          : NotSpeci  
+  fied: (C:\Banking   
+ -Web-...not find     
+symbol:String) []    
+, RemoteException
+    + FullyQualifiedE 
+   rrorId : NativeCo  
+  mmandError
+ 
+@Slf4j
+ ^
+  symbol: class Slf4j
+1 error
+
+> Task :auth-service:compileJava FAILED
+
+[Incubating] Problems report is available at: file:///C:/Banking-Web-Microservices/banking-platform/build/reports/problems/problems-report.html
+
+FAILURE: Build failed 
+with an exception.
+
+* What went wrong:
+Execution failed for 
+task ':auth-service:co
+mpileJava'.
+> Compilation failed; 
+see the compiler 
+output below.
+  C:\Banking-Web-Micro
+services\banking-platf
+orm\auth-service\src\m
+ain\java\com\banking\a
+uth\service\AuthServic
+e.java:19: error: 
+cannot find symbol
+  @Slf4j
+   ^
+    symbol: class 
+Slf4j
+  1 error
+
+* Try:
+> Check your code and 
+dependencies to fix 
+the compilation 
+error(s)
+> Run with --scan to 
+get full insights.
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/8.14/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD FAILED in 6s
+3 actionable tasks: 1 executed, 2 up-to-date

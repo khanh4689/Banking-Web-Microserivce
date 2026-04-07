@@ -1,0 +1,12 @@
+plugins {
+    id 'java'
+} // banking-common depends on standard java plugin, managed by root build.gradle
+
+dependencies {
+    // Lombok
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+    
+    testCompileOnly 'org.projectlombok:lombok'
+    testAnnotationProcessor 'org.projectlombok:lombok'
+}
