@@ -1,0 +1,43 @@
+plugins {
+    id 'org.springframework.boot'
+}
+
+dependencies {
+    // Actuator (for health checks)
+    implementation 'org.springframework.boot:spring-boot-starter-actuator'
+
+    // Common Module
+    implementation project(':banking-common')
+
+    // Web
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+
+    // Security & OAuth2 Resource Server
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+    implementation 'org.springframework.boot:spring-boot-starter-oauth2-resource-server'
+
+    // Eureka Client
+    implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client'
+
+    // JPA & Database
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    runtimeOnly 'org.postgresql:postgresql'
+    implementation 'org.flywaydb:flyway-core'
+
+    // Kafka
+    implementation 'org.springframework.kafka:spring-kafka'
+
+    // Validation
+    implementation 'org.springframework.boot:spring-boot-starter-validation'
+
+    // Lombok
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+
+    // Testing
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation 'org.springframework.security:spring-security-test'
+    testImplementation 'org.springframework.kafka:spring-kafka-test'
+    testCompileOnly 'org.projectlombok:lombok'
+    testAnnotationProcessor 'org.projectlombok:lombok'
+}

@@ -1,0 +1,1 @@
+ALTER TABLE users_profile ADD COLUMN IF NOT EXISTS username VARCHAR(255);

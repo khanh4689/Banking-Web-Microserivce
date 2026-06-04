@@ -1,0 +1,10 @@
+*.hprof
+*.log
+.idea/
+.gradle/
+*/logs/
+postgres-data/
+*/src/
+*/build/tmp/
+*/build/classes/
+*/build/resources/

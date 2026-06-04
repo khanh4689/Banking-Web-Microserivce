@@ -1,0 +1,44 @@
+# Gradle
+.gradle/
+build/
+*/build/
+!gradle/wrapper/gradle-wrapper.jar
+
+# IDE
+.idea/
+*.iml
+*.iws
+*.ipr
+.vscode/
+*.swp
+
+# Logs
+logs/
+*.log
+*-log.txt
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Secrets / env
+.env
+*.env.local
+
+# Docker volumes (local dev)
+docker/postgres/data/
+
+# Test reports
+*/build/reports/
+*/build/test-results/
+
+# Java heap dumps
+*.hprof
+hs_err_pid*.log
+replay_pid*.log
+
+# Temp build output files
+out.txt
+build-output*.txt
+build_output*.txt
+test_rbac.ps1

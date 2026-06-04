@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <include resource="org/springframework/boot/logging/logback/defaults.xml" />
+    <include resource="org/springframework/boot/logging/logback/console-appender.xml" />
+    <include resource="org/springframework/boot/logging/logback/file-appender.xml" />
+
+    <property name="LOG_PATTERN" value="[%property{spring.application.name}] [%X{traceId:-}] %-5level %msg%n"/>
+
+    <appender name="CONSOLE_CUSTOM" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>${LOG_PATTERN}</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="FILE_CUSTOM" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>logs/app.log</file>
+        <encoder>
+            <pattern>${LOG_PATTERN}</pattern>
+        </encoder>
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <fileNamePattern>logs/app-%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+            <maxFileSize>10MB</maxFileSize>
+            <maxHistory>7</maxHistory>
+        </rollingPolicy>
+    </appender>
+
+    <root level="INFO">
+        <appender-ref ref="CONSOLE_CUSTOM" />
+        <appender-ref ref="FILE_CUSTOM" />
+    </root>
+</configuration>
